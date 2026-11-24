@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VEXO Launcher</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080b16;
+  color: white;
+  text-align: center;
+}
+header {
+  padding: 35px 15px;
+  background: linear-gradient(135deg,#171044,#101c42);
+}
+h1 {
+  color: #a78bfa;
+  font-size: 42px;
+}
+p {
+  color: #c5c5d5;
+}
+main {
+  padding: 25px 15px;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+button {
+  background: #242044;
+  color: white;
+  border: 1px solid #8065ff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background: #6545df;
+}
+.card {
+  background: #151a2b;
+  border: 1px solid #343b58;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 25px auto;
+  max-width: 550px;
+}
+.download {
+  display: inline-block;
+  background: #7655ff;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+footer {
+  padding: 25px;
+  color: #888;
+}
+</style>
+</head>
+<body>
 
+<header>
+<h1>VEXO LAUNCHER</h1>
+<p>YOUR MINECRAFT. YOUR WORLD.</p>
+</header>
+
+<main>
+<h2>Welcome to VEXO</h2>
+<p>Your all-in-one Minecraft Launcher</p>
+
+<div class="tabs">
+<button onclick="showTab('Mods')">Mods</button>
+<button onclick="showTab('Texture Packs')">Texture Packs</button>
+<button onclick="showTab('Resource Packs')">Resource Packs</button>
+<button onclick="showTab('Shaders')">Shaders</button>
+<button onclick="showTab('Modpacks')">Modpacks</button>
+</div>
+
+<div class="card">
+<h2 id="heading">Mods</h2>
+<p id="description">Discover Minecraft Mods in one place.</p>
+</div>
+
+<div class="card">
+<h2>Download VEXO Launcher</h2>
+<p>Choose your platform</p>
+<button>Android</button>
+<button>Windows</button>
+<p>Downloads will be available after the apps are built.</p>
+</div>
+</main>
+
+<footer>
+VEXO Launcher © 2026
+</footer>
+
+<script>
+function showTab(name) {
+document.getElementById("heading").innerText = name;
+document.getElementById("description").innerText =
+"Explore " + name + " for Minecraft!";
+}
+</script>
+
+</body>
+</html>
